@@ -1,0 +1,46 @@
+:root {
+  --f-size-card-title: 18px;
+  --c-white: #f1f3fd;
+  --c-blue: hsl(246, 80%, 60%);
+  --c-work: hsl(15, 100%, 70%);
+  --c-play: hsl(195, 74%, 62%);
+  --c-study: hsl(348, 100%, 68%);
+  --c-exercise: hsl(145, 58%, 55%);
+  --c-social: hsl(264, 64%, 52%);
+  --c-self-care: hsl(43, 84%, 65%);
+  --c-very-dark-blue: hsl(226, 43%, 10%);
+  --c-dark-blue: hsl(235, 46%, 20%);
+  --c-desaturated-blue: hsl(235, 45%, 61%);
+  --c-pale-blue: hsl(236, 100%, 87%);
+}
+
+body { background-color: var(--c-very-dark-blue); }
+
+#root {
+  width: 100%;
+  max-width: var(--w-desk);
+  min-height: 100vh;
+  padding-block: clamp(95px, 20%, 270px);
+  margin-inline: auto;
+  font-family: "Rubik", sans-serif; /* Weights: 300, 400, 500 */
+  color: var(--c-pale-blue);
+  background-color: inherit;
+}
+
+.time-tracking-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.54rem;
+  width: min(87.5%, 1110px);
+  margin-inline: auto;
+  --p-card: 1.95rem;
+  --b-radius-card: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .time-tracking-dashboard { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 1.9rem; 
+  }
+}

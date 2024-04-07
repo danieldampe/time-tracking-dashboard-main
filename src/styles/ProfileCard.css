@@ -1,0 +1,110 @@
+/* 
+// *** *** *** Profile Card *** *** ***
+*/
+.profile-card {
+  border-radius: var(--b-radius-card);
+  overflow: hidden;
+  background-color: var(--c-dark-blue);
+}
+
+/* 
+// *** *** *** Top *** *** ***
+*/
+.profile-card-top {
+  display: flex;
+  gap: 1rem;
+  padding: var(--p-card);
+  border-radius: inherit;
+  background-color: var(--c-blue);
+}
+
+/* 
+// *** *** *** User *** *** ***
+*/
+.profile-card-user-picture {
+  width: 4.4rem;
+  border: .2rem solid var(--c-white);
+  border-radius: 50%;
+}
+
+.profile-card-user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-card-user-txt {
+  font-size: calc(var(--f-size) - .07rem);
+}
+
+.profile-card-user-name {
+  font-size: calc(var(--f-size) + .5rem);
+  font-weight: 300;
+  color: var(--c-white);
+}
+
+/* 
+// *** *** *** Bottom *** *** ***
+*/
+.profile-card-bottom {
+  padding-block: calc(var(--p-card) - .4rem);
+  padding-inline: var(--p-card);
+  border-radius: inherit;
+  background-color: inherit;
+}
+
+.profile-card-ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-card-optn {
+  font-size: calc(var(--f-size) + .1rem);
+  color: #6669a4;
+  cursor: pointer;
+}
+
+.profile-card-optn.is-selected,
+.profile-card-optn:hover { color: var(--c-white); }
+
+@media screen and (min-width: 600px) {
+  /* 
+  // *** *** *** Profile Card *** *** ***
+  */
+  .profile-card { 
+    display: flex;
+    flex-direction: column;
+    grid-row: span 2; 
+  } 
+
+  /* 
+  // *** *** *** Top *** *** ***
+  */
+  .profile-card-top {
+    padding-bottom: 5rem;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+
+  .profile-card-user-picture { width: 5.35rem; }
+  
+  .profile-card-user-name { 
+    font-size: calc(var(--f-size) + 1.45rem); 
+    line-height: 3rem;
+  }
+
+  /* 
+  // *** *** *** Bottom *** *** ***
+  */
+  .profile-card-bottom { flex-grow: 1; }
+
+  .profile-card-ul {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .profile-card-optn { padding-block: .45rem; }
+}

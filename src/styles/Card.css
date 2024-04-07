@@ -1,0 +1,121 @@
+/* 
+// *** *** *** Card *** *** ***
+*/
+.card {
+  border-radius: var(--b-radius-card);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform ease .5s;
+}
+
+.card:hover { transform: scale(1.05); }
+
+/* 
+// *** *** *** Top *** *** ***
+*/
+.card-top {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / .117;
+  border-radius: inherit;
+}
+
+.card-icon { position: absolute; }
+
+.card-work .card-icon { 
+  top: -0.7rem;
+  right: 1rem;
+}
+
+.card-play .card-icon { 
+  top: -0.25rem;
+  right: 1.35rem;
+}
+
+.card-study .card-icon { 
+  top: -0.4rem;
+  right: 1.15rem;
+}
+
+.card-exercise .card-icon {
+  top: -0.05rem;
+  right: 1.1rem;
+}
+
+.card-social .card-icon {
+  top: -0.9rem;
+  right: 0.8rem;
+}
+
+.card-self-care .card-icon {
+  top: -0.65rem;
+  right: 1rem;
+}
+
+/* 
+// *** *** *** Bottom *** *** ***
+*/
+.card-bottom {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: .85rem;
+  padding: var(--p-card);
+  border-radius: inherit;
+  background-color: var(--c-dark-blue);
+}
+
+.card:hover 
+.card-bottom { background-color: #34397b; }
+
+/* 
+// *** *** *** Header *** *** ***
+*/
+.card-hdr {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-ellipsis { cursor: pointer; }
+.card-ellipsis:hover { filter: brightness(1.5); }
+
+/* 
+// *** *** *** Body *** *** ***
+*/
+.card-title { 
+  font-size: var(--f-size-card-title); 
+  font-weight: 500;
+  color: var(--c-white);
+}
+
+.card-current {
+  font-size: calc(var(--f-size) + 1rem);
+  font-weight: 300;
+  color: var(--c-white);
+}
+
+/* 
+// *** *** *** Footer *** *** ***
+*/
+.card-previus {
+  font-size: calc(var(--f-size) - .05rem);
+}
+
+@media screen and (min-width: 600px) {
+  .card-top { aspect-ratio: 1 / .18; }
+
+  .card-bottom {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .card-hdr { margin-bottom: 2.8rem; }
+  .card-body { margin-bottom: 1.6rem; }
+  .card-current { font-size: calc(var(--f-size) + 2.45rem); }
+}

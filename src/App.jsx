@@ -10,7 +10,7 @@ export default function App () {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('/data/data.json')
+      const res = await fetch('./data/data.json')
       const data = await res.json()
       setCards(data)
     })()

@@ -25,14 +25,14 @@ export function Card ({ title, stat, timeframes }) {
       >
         <img
           className='card-icon'
-          src={`/images/icon-${kebabCase(title)}.svg`}
+          src={`./images/icon-${kebabCase(title)}.svg`}
           alt={title + ' icon'}
         />
       </div>
       <div className='card-bottom'>
         <div className='card-hdr'>
           <h3 className='card-title'>{title}</h3>
-          <img className='card-ellipsis' src='/images/icon-ellipsis.svg' alt='Ellipsis' />
+          <img className='card-ellipsis' src='./images/icon-ellipsis.svg' alt='Ellipsis' />
         </div>
         <div className='card-body'>
           <p className='card-current'>

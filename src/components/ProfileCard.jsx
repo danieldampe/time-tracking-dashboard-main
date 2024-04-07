@@ -8,7 +8,7 @@ export function ProfileCard ({ stat, setStat }) {
       <div className='profile-card-top'>
         <img
           className='profile-card-user-picture'
-          src='/images/image-jeremy.png'
+          src='./images/image-jeremy.png'
           alt='Jeremy'
         />
         <p className='profile-card-user-info'>
